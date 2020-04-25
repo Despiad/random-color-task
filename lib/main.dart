@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './components/random_color.dart';
+import './screens/random_color_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Random color task',
-      home: RandomColor(),
+      home: RandomColorScreen(),
     );
   }
 }
