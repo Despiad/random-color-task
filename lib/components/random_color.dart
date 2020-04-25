@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import 'package:flutter/material.dart';
 
 class RandomColor extends StatefulWidget {
   @override
@@ -11,20 +11,18 @@ class _RandomColorState extends State<RandomColor> {
   Color _textColor = Colors.black;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GestureDetector(
-        onTap: () => _changeColor(),
-        child: Container(
-          color: _backgroundColor,
-          child: Center(
-            child: Text(
-              'TAP ANYWHERE TO CHANGE A COLOR\n' +
-                  'Background color: $_backgroundColor',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: _textColor,
-                fontWeight: FontWeight.bold,
-              ),
+    return GestureDetector(
+      onTap: () => _changeColor(),
+      child: Container(
+        color: _backgroundColor,
+        child: Center(
+          child: Text(
+            'TAP ANYWHERE TO CHANGE A COLOR\n' +
+                'Background color: $_backgroundColor',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: _textColor,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
