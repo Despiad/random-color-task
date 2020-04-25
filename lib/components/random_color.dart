@@ -8,20 +8,19 @@ class RandomColor extends StatefulWidget {
 
 class _RandomColorState extends State<RandomColor> {
   Color _backgroundColor = Colors.white;
-  Color _textColor = Colors.black;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _changeColor(),
+      onTap: _changeColor,
       child: Container(
         color: _backgroundColor,
         child: Center(
           child: Text(
             'TAP ANYWHERE TO CHANGE A COLOR\n' +
-                'Background color: $_backgroundColor',
+                'Background color: $_backgroundColor\n',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: _textColor,
+              color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -33,11 +32,6 @@ class _RandomColorState extends State<RandomColor> {
   void _changeColor() {
     setState(() {
       _backgroundColor = Color(math.Random().nextInt(0xffffffff));
-      _textColor = _backgroundColor
-          .withAlpha(255)
-          .withBlue(50)
-          .withGreen(50)
-          .withRed(50);
     });
   }
 }
