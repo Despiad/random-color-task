@@ -16,8 +16,7 @@ class _RandomColorState extends State<RandomColor> {
         color: _backgroundColor,
         child: Center(
           child: Text(
-            'TAP ANYWHERE TO CHANGE A COLOR\n' +
-                'Background color: $_backgroundColor\n',
+            'Hey there\nBackground color: $_backgroundColor\n',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.black,
